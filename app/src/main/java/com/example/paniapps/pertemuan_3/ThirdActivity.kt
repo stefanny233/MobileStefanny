@@ -1,5 +1,6 @@
 package com.example.paniapps.pertemuan_3
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
@@ -31,6 +32,8 @@ class ThirdActivity : AppCompatActivity() {
             } else {
                 Toast.makeText(this, "Berhasil terkirim ke nomor: $isiInput", Toast.LENGTH_SHORT).show()
             }
+            val intent = Intent(this, ThirdResultActivity::class.java)
+            startActivity(intent)
         }
     }
 }
