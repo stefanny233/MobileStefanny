@@ -13,17 +13,27 @@
         android:theme="@style/Theme.AppCompat.Light.DarkActionBar">
 
         <activity
+            android:name=".pertemuan_3.WelcomeActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".pertemuan_3.CoffeActivity"
+            android:exported="true">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+
+        <activity
             android:name=".pertemuan_2.MainActivity"
             android:exported="false" />
 
         <activity
             android:name=".pertemuan_2.SecondActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:exported="false" />
 
     </application>
 

@@ -1,0 +1,51 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/kopibg"
+    android:orientation="vertical"
+    android:padding="30dp"
+    android:gravity="bottom|center_horizontal">
+
+    <ImageView
+        android:id="@+id/imgLogoWelcome"
+        android:layout_width="400dp"
+        android:layout_height="400dp"
+        android:layout_marginBottom="40dp"
+        android:src="@drawable/logoaja" />
+
+    <TextView
+        android:id="@+id/tvTitleWelcome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/sora_bold"
+        android:gravity="center"
+        android:text="Coffee so good, your taste buds will love it."
+        android:textColor="@color/white"
+        android:textSize="34sp" />
+
+    <TextView
+        android:id="@+id/tvDescWelcome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:alpha="0.7"
+        android:gravity="center"
+        android:text="The best grain, the most roasting, the best flavor."
+        android:textColor="@color/white"
+        android:textSize="14sp" />
+
+    <Button
+        android:id="@+id/btnGetStarted"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="@color/brown"
+        android:fontFamily="@font/sora_bold"
+        android:text="Get Started"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+
+</LinearLayout>
