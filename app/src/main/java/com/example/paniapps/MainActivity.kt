@@ -18,6 +18,10 @@ class MainActivity : AppCompatActivity() {
 
         binding.btnToFourth.setOnClickListener {
             val intent = Intent(this, FourthActivity::class.java)
+            /*tambahkan bagian berikut*/
+            intent.putExtra("name", "Politeknik Caltex Riau")
+            intent.putExtra("from", "Rumbai")
+            intent.putExtra("age", 25)
             startActivity(intent)
         }
     }
