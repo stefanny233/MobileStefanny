@@ -10,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.paniapps.R
+import com.example.paniapps.databinding.ActivityFourthBinding
 import com.example.paniapps.databinding.ActivityThirdBinding
 
 class ThirdActivity : AppCompatActivity() {
@@ -18,9 +19,13 @@ class ThirdActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-
         binding = ActivityThirdBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
+            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
+            insets
+        }
 
 
         // Set onClickListener
@@ -30,7 +35,8 @@ class ThirdActivity : AppCompatActivity() {
             if (isiInput.isEmpty()) {
                 Toast.makeText(this, "Nomor tidak boleh kosong", Toast.LENGTH_SHORT).show()
             } else {
-                Toast.makeText(this, "Berhasil terkirim ke nomor: $isiInput", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Berhasil terkirim ke nomor: $isiInput", Toast.LENGTH_SHORT)
+                    .show()
             }
             val intent = Intent(this, ThirdResultActivity::class.java)
             startActivity(intent)
