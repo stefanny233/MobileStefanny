@@ -10,6 +10,8 @@ import androidx.core.view.WindowInsetsCompat
 import com.example.paniapps.MainActivity
 import com.example.paniapps.R
 import com.example.paniapps.databinding.ActivityFourthBinding
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
+import com.google.android.material.snackbar.Snackbar
 
 class FourthActivity : AppCompatActivity() {
 
@@ -29,20 +31,46 @@ class FourthActivity : AppCompatActivity() {
         binding.btnKembali.setOnClickListener {
             finish()
         }
-        val name = intent.getStringExtra("nama")
-        val from = intent.getStringExtra("asal")
-        val age = intent.getIntExtra("usia",0)
-        Log.e("Data Intent","Nama: $name , Usia: $age, Asal: $from")
+
+        binding.btnShowSnackbar.setOnClickListener {
+            Snackbar.make(binding.root, "Ini adalah Snackbar", Snackbar.LENGTH_SHORT)
+                .setAction("Tutup") {
+                    Log.e("Info Snackbar", "Snackbar ditutup")
+                }
+                .show()
+            val name = intent.getStringExtra("nama")
+            val from = intent.getStringExtra("asal")
+            val age = intent.getIntExtra("usia", 0)
+            Log.e("Data Intent", "Nama: $name , Usia: $age, Asal: $from")
+        }
+
+        binding.btnShowAlertDialog.setOnClickListener {
+            MaterialAlertDialogBuilder(this)
+                .setTitle("Konfirmasi")
+                .setMessage("Apakah Anda yakin ingin melanjutkan?")
+                .setPositiveButton("Ya") { dialog, _ ->
+                    dialog.dismiss()
+                    Log.e("Info Dialog","Anda memilih Ya!")
+                }
+                .setNegativeButton("Batal") { dialog, _ ->
+                    dialog.dismiss()
+                    finish()
+                    Log.e("Info Dialog","Anda memilih Tidak!")
+                }
+                .show()
+        }
+
+
     }
+
 
     override fun onStart() {
         super.onStart()
-        Log.e("onStart", "onStart: {nama_activity} terlihat di layar")
+        Log.e("onStart", "onStart: FourthActivity terlihat di layar")
     }
 
     override fun onDestroy() {
         super.onDestroy()
-        Log.e("onDestroy", "{nama_activity} dihapus dari stack")
+        Log.e("onDestroy", "FourthActivity dihapus dari stack")
     }
-
 }
