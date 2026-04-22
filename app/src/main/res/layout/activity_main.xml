@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="30dp"
+    android:gravity="center"
+    android:background="@drawable/kopibg">
+
+    <Button
+        android:id="@+id/btnRumus"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="Kalkulator Bangun"/>
+
+    <Button
+        android:id="@+id/btnCoffee"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="Coffee Login"
+        android:layout_marginTop="16dp"/>
+
+    <Button
+        android:id="@+id/btnCustom2"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="Custom Page"
+        android:layout_marginTop="16dp"/>
+
+    <Button
+        android:id="@+id/btnLogout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="Logout"
+        android:layout_marginTop="16dp"/>
+
+</LinearLayout>

@@ -1,23 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
     <application
         android:allowBackup="true"
-        android:dataExtractionRules="@xml/data_extraction_rules"
-        android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.DarkActionBar">
 
+        <!-- HALAMAN AWAL -->
         <activity
             android:name=".pertemuan_3.WelcomeActivity"
-            android:exported="false" />
-
-        <activity
-            android:name=".pertemuan_3.CoffeActivity"
             android:exported="true">
 
             <intent-filter>
@@ -27,12 +21,24 @@
 
         </activity>
 
+        <!-- MAIN MENU -->
         <activity
             android:name=".pertemuan_2.MainActivity"
             android:exported="false" />
 
+        <!-- KALKULATOR -->
         <activity
             android:name=".pertemuan_2.SecondActivity"
+            android:exported="false" />
+
+        <!-- COFFEE MENU -->
+        <activity
+            android:name=".pertemuan_3.CoffeActivity"
+            android:exported="false" />
+
+        <!-- CUSTOM PAGE -->
+        <activity
+            android:name=".pertemuan_4.CustomActivity2"
             android:exported="false" />
 
     </application>
