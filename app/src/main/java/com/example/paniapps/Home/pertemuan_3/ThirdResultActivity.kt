@@ -1,4 +1,4 @@
-package com.example.paniapps.pertemuan_3
+package com.example.paniapps.Home.pertemuan_3
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge

@@ -1,4 +1,4 @@
-package com.example.paniapps.pertemuan_7
+package com.example.paniapps.Home.pertemuan_7
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

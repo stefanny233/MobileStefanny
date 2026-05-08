@@ -5,9 +5,9 @@ import android.os.Bundle
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.example.paniapps.databinding.ActivityMainBinding
-import com.example.paniapps.pertemuan_4.FourthActivity
-import com.example.paniapps.pertemuan_5.FifthActivity
-import com.example.paniapps.pertemuan_7.SeventhActivity
+import com.example.paniapps.Home.pertemuan_4.FourthActivity
+import com.example.paniapps.Home.pertemuan_5.FifthActivity
+import com.example.paniapps.Home.pertemuan_7.SeventhActivity
 
 class MainActivity : AppCompatActivity() {
 
