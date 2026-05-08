@@ -6,6 +6,8 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.example.paniapps.databinding.ActivityMainBinding
 import com.example.paniapps.pertemuan_4.FourthActivity
+import com.example.paniapps.pertemuan_5.FifthActivity
+import com.example.paniapps.pertemuan_7.SeventhActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -25,6 +27,16 @@ class MainActivity : AppCompatActivity() {
             intent.putExtra("name", "Politeknik Caltex Riau")
             intent.putExtra("from", "Rumbai")
             intent.putExtra("age", 25)
+            startActivity(intent)
+        }
+        binding.btnToFifth.setOnClickListener {
+            val intent = Intent(this, FifthActivity::class.java)
+            /*tambahkan bagian berikut*/
+            startActivity(intent)
+        }
+        binding.btnToSeventh.setOnClickListener {
+            val intent = Intent(this, SeventhActivity::class.java)
+            /*tambahkan bagian berikut*/
             startActivity(intent)
         }
 
