@@ -15,6 +15,7 @@ import com.example.paniapps.Home.pertemuan_5.FifthActivity
 import com.example.paniapps.Home.pertemuan_7.SeventhActivity
 import com.example.paniapps.R
 import com.example.paniapps.databinding.FragmentHomeBinding
+import com.example.paniapps.pertemuan_9.NinthActivity
 
 class HomeFragment : Fragment() {
 
@@ -52,6 +53,11 @@ class HomeFragment : Fragment() {
         }
         binding.btnToSeventh.setOnClickListener {
             val intent = Intent(requireContext(), SeventhActivity::class.java)
+            /*tambahkan bagian berikut*/
+            startActivity(intent)
+        }
+        binding.btnToNinth.setOnClickListener {
+            val intent = Intent(requireContext(), NinthActivity::class.java)
             /*tambahkan bagian berikut*/
             startActivity(intent)
         }
