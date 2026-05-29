@@ -35,7 +35,7 @@
         android:id="@+id/btnToThird"
         android:layout_width="0dp"
         android:layout_height="60dp"
-        android:layout_marginTop="140dp"
+        android:layout_marginTop="120dp"
         android:elevation="2dp"
         android:text="Pertemuan 3"
         android:textAllCaps="false"
@@ -127,9 +127,18 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnToNinth"
-        app:layout_constraintVertical_bias="0.069"
+        app:layout_constraintVertical_bias="0.574"
         app:strokeColor="#FFCDD2"
         app:strokeWidth="1dp" />
+
+    <Button
+        android:id="@+id/btnToTenth"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Pertemuan 10"
+        app:layout_constraintBottom_toTopOf="@+id/btnLogout"
+        app:layout_constraintTop_toBottomOf="@+id/btnToNinth"
+        tools:layout_editor_absoluteX="0dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
