@@ -158,6 +158,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tvCatFact" />
 
+
             <Button
                 android:id="@+id/btnRefresh"
                 android:layout_width="0dp"
