@@ -10,9 +10,20 @@ import androidx.core.view.WindowInsetsCompat
 import com.example.paniapps.R
 import com.example.paniapps.databinding.ActivityNinthBinding
 import com.google.android.material.chip.Chip
+import android.Manifest
+import android.content.Intent
+import androidx.activity.result.contract.ActivityResultContracts
 
 class NinthActivity : AppCompatActivity() {
     private lateinit var binding: ActivityNinthBinding
+    private val notificationPermissionLauncher =
+        registerForActivityResult(ActivityResultContracts.RequestPermission()) { isGranted ->
+            if (isGranted) {
+                Toast.makeText(this, "Notifikasi diizinkan", Toast.LENGTH_SHORT).show()
+            } else {
+                Toast.makeText(this, "Notifikasi ditolak", Toast.LENGTH_SHORT).show()
+            }
+        }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -49,5 +60,6 @@ class NinthActivity : AppCompatActivity() {
             }
             else -> super.onOptionsItemSelected(item)
         }
+
     }
 }

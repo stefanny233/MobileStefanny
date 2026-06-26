@@ -15,6 +15,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.paniapps.AuthActivity
 import com.example.paniapps.Home.pertemuan_10.TenthActivity
 import com.example.paniapps.Home.pertemuan_13.ThirteenthActivity
+import com.example.paniapps.Home.pertemuan_3.ThirdActivity
 import com.example.paniapps.Home.pertemuan_4.FourthActivity
 import com.example.paniapps.Home.pertemuan_5.FifthActivity
 import com.example.paniapps.Home.pertemuan_7.SeventhActivity
@@ -53,6 +54,11 @@ class HomeFragment : Fragment() {
             intent.putExtra("name", "Politeknik Caltex Riau")
             intent.putExtra("from", "Rumbai")
             intent.putExtra("age", 25)
+            startActivity(intent)
+        }
+        binding.btnToThird.setOnClickListener {
+            val intent = Intent(requireContext(), ThirdActivity::class.java)
+            /*tambahkan bagian berikut*/
             startActivity(intent)
         }
         binding.btnToFifth.setOnClickListener {
