@@ -14,6 +14,7 @@ import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.paniapps.AuthActivity
 import com.example.paniapps.Home.pertemuan_10.TenthActivity
+import com.example.paniapps.Home.pertemuan_13.ThirteenthActivity
 import com.example.paniapps.Home.pertemuan_4.FourthActivity
 import com.example.paniapps.Home.pertemuan_5.FifthActivity
 import com.example.paniapps.Home.pertemuan_7.SeventhActivity
@@ -72,6 +73,10 @@ class HomeFragment : Fragment() {
         binding.btnToTenth.setOnClickListener {
             val intent = Intent(requireContext(), TenthActivity::class.java)
             /*tambahkan bagian berikut*/
+            startActivity(intent)
+        }
+        binding.btnToThirteenth.setOnClickListener {
+            val intent = Intent(requireContext(), ThirteenthActivity::class.java)
             startActivity(intent)
         }
 
